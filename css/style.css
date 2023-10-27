@@ -6,6 +6,8 @@
 }
 body {
   font-family: "Oswald", sans-serif;
+  background: black;
+  color: #d7d759;
 }
 header {
   position: sticky;
@@ -13,6 +15,7 @@ header {
   background-color: white;
   padding: 15px 0px;
   z-index: 100;
+  background: black;
 }
 .navbar-brand {
   display: flex;
@@ -61,7 +64,7 @@ header {
 .slogan h1 {
   font-size: 9rem;
   font-weight: bold;
-  color: #5e2f94;
+  color: #3a1069;
   text-align: center;
   padding-top: 10px;
 }
@@ -83,9 +86,10 @@ header {
 .title i {
   font-size: 50px;
   margin: 5px;
+  color: black;
 }
 main {
-  background-color: #e6dcdb;
+  background-color: #d7d759;
 }
 
 .carousel-inner {
@@ -102,10 +106,16 @@ main {
 .introduce {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 15px;
+}
+.introduce-image {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+  background: #e91265;
 }
 .introduce img {
-  width: 25%;
+  width: 90%;
 }
 .introduce p {
   color: black;
@@ -121,11 +131,22 @@ main {
   float: left;
   border-radius: 3px;
 }
+.introduce-text {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .introduce-text h2 {
   font-size: 2.5rem;
   padding-left: 70px;
   color: #e91265;
   font-family: "Anton", sans-serif;
+}
+
+.introduce-text h2 {
+  font-size: 4rem;
+  text-align: center;
 }
 .stylings img {
   width: 23%;
@@ -136,7 +157,7 @@ main {
 }
 .marketing h2 {
   font-size: 2.2rem;
-  color: #5e2f94;
+  color: #d7d759;
   font-weight: bold;
   text-align: center;
   padding: 10px;
@@ -152,15 +173,19 @@ main {
 }
 .banner h2 {
   font-size: 2.5rem;
-  color: #5e2f94;
+  color: #d7d759;
   font-weight: bold;
 }
 
 .curly {
   display: flex;
   justify-content: space-around;
-  background-color: #e6dcdb;
-  padding: 20px;
+  align-items: center;
+  padding: 50px 0px;
+}
+.curly img {
+  width: 25%;
+  border-radius: 50%;
 }
 .carousel {
   width: 540px;
@@ -173,12 +198,59 @@ main {
 }
 .curly-text h2 {
   font-size: 4.5rem;
-  color: #5e2f94;
+  color: #d7d759;
   font-family: "Anton", sans-serif;
 }
 .curly-text p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  width: 450px;
+  font-weight: bolder;
+  color: #3a1069;
+  background: #e91265;
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 12px;
+  border: 3px solid #d7d759;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: #e91265;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
 }
+.curly-text p:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #3a1069;
+  border-radius: 5px;
+  z-index: -1;
+}
+.curly-text p:hover,
+.curly-text p:focus {
+  color: #d7d759;
+  border: 3px solid #d7d759;
+}
+.curly-text p:hover:before,
+.curly-text p:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.curly-text p:active {
+  transform: scale(0.9);
+}
+
 .rotulo {
   font-size: 1.2rem;
   color: #e91265;
@@ -187,19 +259,17 @@ main {
 
 .color {
   display: flex;
-  padding: 10px 30px;
+  justify-content: space-around;
+  padding: 30px;
+  margin-top: 30px;
 }
 
-.color-slogan--img {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
 .color-slogan--title {
-  width: 100%;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .color-slogan--head {
   margin-left: 30px;
@@ -210,10 +280,20 @@ main {
   color: #e91265;
 }
 .color-slogan--title p {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: lighter !important;
   padding: 0px 30px;
   text-align: justify;
+}
+.color-slogan-button {
+  display: flex;
+  align-items: center;
+}
+.color-button {
+  background: #6600cc;
+  border: 3px solid #d7d759;
+  border-radius: 5px;
+  animation: pulse 2s infinite;
 }
 .img-color {
   width: 99%;
@@ -224,15 +304,15 @@ main {
   justify-content: center;
   padding: 30px 0px;
 }
-.turnos h2 {
+.neon {
   border-radius: 15px;
-  color: #e39eb8;
+  color: #d7d759;
   padding: 20px;
   background-color: black;
 
-  text-shadow: 0 0 5px #e91265, 0 0 15px #e91265, 0 0 20px #e91265,
-    0 0 40px #ffc0cb, 0 0 60px #e91265, 0 0 10px #ffc0cb, 0 0 98px #ff0000;
-  color: #ec85ad;
+  text-shadow: 0 0 5px #d7d759, 0 0 15px #d7d759, 0 0 20px #d7d759,
+    0 0 40px #ddb8e6, 0 0 60px #3a1069, 0 0 10px #bca2db, 0 0 98px #b67df8;
+  color: #d7d759;
   text-align: center;
   animation: blink 12s infinite;
   -webkit-animation: blink 12s infinite;
@@ -259,8 +339,169 @@ main {
   }
 }
 
+.introduce-text--title {
+  font-size: 4.5rem;
+}
+
+/*BOTON NUESTROS SERVICIOS*/
+
+.neon-servicios {
+  text-align: center;
+  border: 5px solid #d7d759;
+  border-radius: 20px;
+  animation: border-flicker 2s linear infinite;
+  padding: 15px;
+  font-size: 1.2rem;
+}
+
+.neon-servicios h3 {
+  color: #d7d759;
+  animation: text-flicker 3s linear infinite;
+  font-weight: bold;
+}
+
+#offset {
+  animation: letter-flicker 2s linear infinite;
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+
+  2% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+  8% {
+    opacity: 0.1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+  9% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+  12% {
+    opacity: 0.1;
+    text-shadow: 0px 0px #d7d759;
+  }
+  20% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+  25% {
+    opacity: 0.3;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+  30% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+
+  70% {
+    opacity: 0.7;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+
+  72% {
+    opacity: 0.2;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+
+  77% {
+    opacity: 0.9;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+  100% {
+    opacity: 0.9;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+  }
+  2% {
+    opacity: 1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+  }
+  4% {
+    opacity: 0.1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+  }
+
+  8% {
+    opacity: 1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+  }
+  70% {
+    opacity: 0.7;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+  }
+  100% {
+    opacity: 1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+  }
+}
+
+@keyframes letter-flicker {
+  0% {
+    opacity: 0.1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+  2% {
+    opacity: 0.1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+  4% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+
+  19% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+  21% {
+    opacity: 0.1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+  23% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+
+  80% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+  83% {
+    opacity: 0.4;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+  87% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px #d7d759;
+  }
+}
+
 footer {
-  background-color: pink;
+  background-color: black;
   display: flex;
   justify-content: space-between;
   padding: 40px;
@@ -268,7 +509,7 @@ footer {
 footer i {
   margin: 0px 30px;
   font-size: 40px;
-  color: #5e2f94;
+  color: #d7d759;
 }
 .footer_location {
   display: flex;
